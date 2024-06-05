@@ -1,4 +1,4 @@
-```markdown
+
 **Model-Madness** is an innovative tool for visualizing machine learning model predictions. Users can upload CSV files, select features and labels, and choose from Linear Regression, Decision Tree, or Random Forest models. The tool handles data preprocessing automatically, ensuring clean and ready-to-use data. It generates interactive visualizations that display model predictions and trends, making complex machine learning insights accessible and understandable. As an open project, it is continuously being developed and improved, welcoming contributions from the community.
 
 ## Features
