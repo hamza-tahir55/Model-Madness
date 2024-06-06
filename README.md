@@ -17,7 +17,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
 ```sh
-git clone https://github.com/yourusername/vizwiz.git
+git clone https://github.com/hamza-tahir55/Model-Madness.git
 cd vizwiz
 ```
 
