@@ -18,7 +18,7 @@ To run this project locally, follow these steps:
 
 ```sh
 git clone https://github.com/hamza-tahir55/Model-Madness.git
-cd vizwiz
+cd Model-Madness
 ```
 
 2. **Install the required dependencies:**
