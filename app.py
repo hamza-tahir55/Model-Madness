@@ -6,8 +6,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.decomposition import PCA
+from sklearn.metrics import r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+
+st.set_page_config(page_title="Model Madness")
 
 def preprocess_data(data, features, label):
     # Handle missing values
@@ -32,7 +35,7 @@ def preprocess_data(data, features, label):
     return X, y
 
 def main():
-    st.title("ML Model Visualization")
+    st.title("Model Madness")
 
     # File uploader for CSV files
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
@@ -59,6 +62,14 @@ def main():
 
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
             model.fit(X_train, y_train)
+
+            y_pred = model.predict(X_test)
+
+            # Calculate and display evaluation metrics
+            r2 = r2_score(y_test, y_pred)
+            mae = mean_absolute_error(y_test, y_pred)
+            st.write(f"R-squared: {r2:.2f}")
+            st.write(f"Mean Absolute Error: {mae:.2f}")
 
             if len(features) == 1:
                 x_range = np.linspace(X.min(), X.max(), 100)
